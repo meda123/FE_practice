@@ -1,0 +1,38 @@
+<!-- Basic Modal Button -->
+
+<button id="bModal">Select Me</button>
+
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Happy Thursday! Hope you're having a great day :) </p>
+  </div>
+
+</div>
+
+
+<script> 
+var modal = document.getElementById('myModal');
+
+var disp = document.getElementById("bModal");
+
+var close = document.getElementsByClassName("close")[0];
+
+disp.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the "out" X button is selected, hide text 
+close.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script> 
